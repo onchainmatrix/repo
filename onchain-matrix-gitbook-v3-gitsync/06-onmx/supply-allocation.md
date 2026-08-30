@@ -8,17 +8,17 @@ ONMX has a fixed total supply of **1,000,000,000 tokens**.
 
 ## Allocation
 
-| Category | % of Supply | Tokens |
-| --- | ---: | ---: |
-| Treasury Reserve & LP | 72.5% | 725,000,000 |
-| Public Sale | 10.0% | 100,000,000 |
-| Team & Advisors | 5.0% | 50,000,000 |
-| Seed | 2.5% | 25,000,000 |
-| Presale | 2.5% | 25,000,000 |
-| Community Participation | 2.5% | 25,000,000 |
-| Ecosystem Growth | 2.5% | 25,000,000 |
-| Infrastructure Development | 2.5% | 25,000,000 |
-| **Total** | **100%** | **1,000,000,000** |
+| Category                   | % of Supply |            Tokens |
+| -------------------------- | ----------: | ----------------: |
+| Treasury Reserve & LP      |       72.5% |       725,000,000 |
+| Public Sale                |       10.0% |       100,000,000 |
+| Team & Advisors            |        5.0% |        50,000,000 |
+| Seed                       |        2.5% |        25,000,000 |
+| Presale                    |        2.5% |        25,000,000 |
+| Community Participation    |        2.5% |        25,000,000 |
+| Ecosystem Growth           |        2.5% |        25,000,000 |
+| Infrastructure Development |        2.5% |        25,000,000 |
+| **Total**                  |    **100%** | **1,000,000,000** |
 
 ## Core Treasury Allocation — 87.5%
 
@@ -32,7 +32,7 @@ The classification describes the intended economic use of these allocations. It 
 
 ## Treasury Reserve & LP lock structure
 
-The 72.5% Treasury Reserve & LP allocation is intended to use a long-duration, third-party vesting or lock structure through **Magna** over an **eight-year** period.
+The 72.5% Treasury Reserve & LP allocation is intended to use a long-duration, third-party vesting or lock structure over an **eight-year** period.
 
 The objective is to provide independent infrastructure and long-duration supply discipline without presenting a fixed public schedule of future treasury sales. Release and deployment mechanics remain subject to the applicable lock structure, treasury policy, market conditions, protocol needs, and published terms.
 

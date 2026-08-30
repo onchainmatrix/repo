@@ -1,22 +1,51 @@
 ---
-description: The planned credit lifecycle from origination to tokenized debt, secondary liquidity, repayment, or resolution.
+description: >-
+  The planned credit lifecycle from origination to tokenized debt, secondary
+  liquidity, repayment, or resolution.
 ---
 
 # Credit Lifecycle & Tokenized Debt
 
 The credit layer is designed around a defined lifecycle so that key economic and enforcement terms are established before funding.
 
+{% code expandable="true" %}
 ```mermaid
-flowchart LR
-    A[Terms & Eligibility] --> B[Collateral Lock]
-    B --> C[Funding]
-    C --> D[Active Monitoring]
-    D --> E[Tokenized Debt Position]
-    E --> F[Hold to Maturity]
-    E --> G[Approved Secondary Liquidity]
-    F --> H[Repayment / Resolution]
+%%{init: {
+  "flowchart": {
+    "nodeSpacing": 18,
+    "rankSpacing": 24,
+    "curve": "basis"
+  },
+  "themeVariables": {
+    "fontSize": "13px"
+  }
+}}%%
+
+flowchart TB
+
+    A[Terms & Eligibility]
+    B[Collateral Lock]
+    C[Funding]
+    D[Active Monitoring]
+    E[Tokenized Debt Position]
+
+    F[Hold to Maturity]
+    G[Approved Secondary Liquidity]
+
+    H[Repayment / Resolution]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+
+    E --> F
+    E --> G
+
+    F --> H
     G --> H
 ```
+{% endcode %}
 
 ## 1. Origination
 
@@ -34,13 +63,13 @@ Capital is released only after required conditions are satisfied.
 
 Oracle and market data can be used to monitor:
 
-- collateral value,
-- LTV,
-- warning zones,
-- liquidation zones,
-- repayment status,
-- maturity,
-- liquidity conditions.
+* collateral value,
+* LTV,
+* warning zones,
+* liquidation zones,
+* repayment status,
+* maturity,
+* liquidity conditions.
 
 ## 5. Tokenized debt
 

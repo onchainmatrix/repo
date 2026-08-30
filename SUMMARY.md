@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Onchain Matrix](README.md)
+* [Welcome to Onchain Matrix](README.md)
 * [Summary](summary.md)
 * [Start-here](start-here/README.md)
   * [Overview](start-here/overview.md)

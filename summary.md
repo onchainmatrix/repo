@@ -27,8 +27,11 @@
 
 * [Risk Management Framework](risk-security/risk-management.md)
 * [Security Architecture](risk-security/security-architecture.md)
+* [Protocol Roles and Permissions](risk-security/protocol-roles-and-permissions.md)
+* [Security Center](risk-security/security-center.md)
+* [Oracle and Data Framework](risk-security/oracle-and-data-framework.md)
 
-## ONMX
+## Tokenomics
 
 * [ONMX Token Overview](tokenomics-and-utility/token-overview.md)
 * [Supply, Allocation & Vesting](tokenomics-and-utility/supply-allocation.md)

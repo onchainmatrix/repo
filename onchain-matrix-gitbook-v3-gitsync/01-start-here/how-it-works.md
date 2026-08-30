@@ -6,22 +6,58 @@ description: How capital, revenue, and value flow through the Onchain Matrix pro
 
 Onchain Matrix is designed as one capital framework with connected capital and revenue flows.
 
+{% code expandable="true" %}
 ```mermaid
-flowchart LR
-    A[Capital Entry] --> B[Protocol-Owned Treasury]
-    B --> C[Deployment Engine]
-    C --> D[Treasury Yield]
-    C --> E[Credit Activity]
-    E --> F[Credit Fees & Marketplace Revenue]
-    D --> G[Protocol Revenue]
+%%{init: {
+  "flowchart": {
+    "nodeSpacing": 18,
+    "rankSpacing": 24,
+    "curve": "basis"
+  },
+  "themeVariables": {
+    "fontSize": "13px"
+  }
+}}%%
+
+flowchart TB
+
+    A[Capital Entry]
+    B[Protocol-Owned Treasury]
+    C[Deployment Engine]
+
+    D[Treasury Yield]
+    E[Credit Activity]
+    F[Credit Fees & Marketplace Revenue]
+
+    G[Protocol Revenue]
+
+    H[Operations & Risk Reserves]
+    I[Revenue Allocation]
+
+    J[Treasury Growth]
+    K[Buyback & Burn]
+    L[Eligible Stablecoin Distributions]
+
+    A --> B
+    B --> C
+
+    C --> D
+    C --> E
+
+    D --> G
+    E --> F
     F --> G
-    G --> H[Operations & Risk Reserves]
-    G --> I[Revenue Allocation]
-    I --> J[Treasury Growth]
-    I --> K[Buyback & Burn]
-    I --> L[Eligible Stablecoin Distributions]
-    J --> B
+
+    G --> H
+    G --> I
+
+    I --> J
+    I --> K
+    I --> L
+
+    J -. Reinvestment .-> B
 ```
+{% endcode %}
 
 ## 1. Capital entry
 
@@ -35,12 +71,12 @@ Protocol-owned treasury capital becomes the primary productive capital base. Tre
 
 Approved capital can be deployed across a diversified mix such as:
 
-- stablecoin and liquidity reserves,
-- major crypto assets,
-- lower-risk yield strategies,
-- tokenized RWAs,
-- approved credit participation,
-- selectively capped higher-yield opportunities.
+* stablecoin and liquidity reserves,
+* major crypto assets,
+* lower-risk yield strategies,
+* tokenized RWAs,
+* approved credit participation,
+* selectively capped higher-yield opportunities.
 
 ## 4. Protocol revenue
 
@@ -50,11 +86,11 @@ Potential protocol revenue can come from multiple sources, including treasury yi
 
 Protocol revenue is intended to support a combination of:
 
-- operations and infrastructure,
-- risk and liquidity reserves,
-- treasury growth,
-- ONMX buybacks and burns where conditions support them,
-- eligible stablecoin distributions where permitted,
-- long-term protocol expansion.
+* operations and infrastructure,
+* risk and liquidity reserves,
+* treasury growth,
+* ONMX buybacks and burns where conditions support them,
+* eligible stablecoin distributions where permitted,
+* long-term protocol expansion.
 
 The allocation mix can change over time based on treasury policy, risk conditions, legal considerations, market liquidity, and protocol maturity.

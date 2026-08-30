@@ -22,12 +22,12 @@ Onchain Matrix is organized around three connected layers:
 
 ## Design principles
 
-* **Preserve capital before pursuing return.**
-* **Generate yield from productive deployment, not token emissions.**
-* **Fund operations from yield and protocol revenue rather than routinely spending treasury principal.**
-* **Separate financial risk management from cybersecurity controls.**
-* **Use multi-party control, controlled upgrades, monitoring, and public onchain verification for critical infrastructure.**
-* **Introduce credit and tokenized-debt functionality in phases as the protocol, treasury, security controls, and market infrastructure mature.**
+* Preserve capital before pursuing return.
+* Generate yield from productive deployment, not token emissions.
+* Fund operations from yield and protocol revenue rather than routinely spending treasury principal.
+* Separate financial risk management from cybersecurity controls.
+* Use multi-party control, controlled upgrades, monitoring, and public onchain verification for critical infrastructure.
+* Introduce credit and tokenized-debt functionality in phases as the protocol, treasury, security controls, and market infrastructure mature.
 
 > Some components described in this documentation are live or in launch-stage deployment, while others are roadmap features. See **Current Status** for the distinction.
 

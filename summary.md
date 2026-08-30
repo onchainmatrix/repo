@@ -37,7 +37,7 @@
 * [Supply, Allocation & Vesting](tokenomics-and-utility/supply-allocation.md)
 * [Protocol Revenue & ONMX Value Capture](tokenomics-and-utility/value-capture-distributions.md)
 
-## Seed Access
+## Finance
 
 * [Seed Round](finance/seed-round.md)
 
@@ -48,6 +48,11 @@
 ## Resources
 
 * [Contracts, Transparency & Public Verification](resources/contracts-transparency.md)
+* [Deployments and Contract Addresses](resources/deployments-and-contract-addresses.md)
+
+## Resources/Treasury
+
+* [ONMX Supply and Circulating Supply Transparency](resources_treasury/onmx-supply-and-circulating-supply-transparency.md)
 
 ## Legal & Risk
 

@@ -1,5 +1,7 @@
 ---
-description: An overview of the Onchain Matrix protocol, its purpose, and its capital infrastructure model.
+description: >-
+  An overview of the Onchain Matrix protocol, its purpose, and its capital
+  infrastructure model.
 ---
 
 # Overview
@@ -23,16 +25,16 @@ The protocol is not designed around high-emission rewards or a constant need to 
 
 **Treasury formation → productive deployment → yield and protocol revenue → operations, reserves, treasury growth, and ONMX-aligned value capture.**
 
-This does not eliminate risk. It changes the source of protocol economics from inflationary token issuance toward deployed capital, service activity, and protocol revenue.
+It changes the source of protocol economics from inflationary token issuance toward deployed capital, service activity, and protocol revenue.
 
 ## What Onchain Matrix is building
 
-- A protocol-owned treasury and yield engine.
-- Risk-managed capital allocation across approved crypto, stablecoins, tokenized RWAs, and other strategies.
-- A hybrid credit layer combining P2P matching, pool-based liquidity, and treasury participation.
-- Structured collateralized credit terms with defined maturity, LTV, repayment, default, and resolution logic.
-- Tokenized debt positions that can become transferable and support secondary-market liquidity.
-- An ONMX economic model tied to protocol utility, revenue, treasury growth, and supply discipline.
+* A protocol-owned treasury and yield engine.
+* Risk-managed capital allocation across approved crypto, stablecoins, tokenized RWAs, and other strategies.
+* A hybrid credit layer combining P2P matching, pool-based liquidity, and treasury participation.
+* Structured collateralized credit terms with defined maturity, LTV, repayment, default, and resolution logic.
+* Tokenized debt positions that can become transferable and support secondary-market liquidity.
+* An ONMX economic model tied to protocol utility, revenue, treasury growth, and supply discipline.
 
 ## What Onchain Matrix is not
 

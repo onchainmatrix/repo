@@ -6,9 +6,9 @@ description: Overview of ONMX, the ecosystem alignment token of Onchain Matrix.
 
 **ONMX** is the ecosystem alignment token of Onchain Matrix.
 
-- **Network:** BNB Chain
-- **Standard:** BEP-20
-- **Fixed total supply:** 1,000,000,000 ONMX
+* **Network:** BNB Chain
+* **Standard:** BEP-20
+* **Fixed total supply:** 1,000,000,000 ONMX
 
 ONMX is designed around long-term alignment with treasury growth, protocol utility, value capture, and protocol sustainability.
 
@@ -40,4 +40,4 @@ Onchain Matrix is designed so that treasury yield and protocol revenue come from
 
 ## Rights and terms
 
-The legal and economic rights associated with ONMX are defined by the applicable contracts, protocol documentation, and participation terms. Nothing in this documentation should be read as a guarantee of profit, appreciation, liquidity, or distribution.
+The legal and economic rights associated with ONMX are defined by the applicable contracts, protocol documentation, and participation terms.

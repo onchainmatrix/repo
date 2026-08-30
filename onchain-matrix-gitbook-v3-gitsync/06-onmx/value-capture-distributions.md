@@ -1,5 +1,7 @@
 ---
-description: How protocol revenue can support treasury growth, ONMX value capture, stablecoin distributions, and operations.
+description: >-
+  How protocol revenue can support treasury growth, ONMX value capture,
+  stablecoin distributions, and operations.
 ---
 
 # Protocol Revenue & ONMX Value Capture
@@ -36,11 +38,11 @@ Retaining part of surplus revenue expands the productive capital base and can in
 
 Where policy, treasury conditions, market liquidity, and legal considerations permit, surplus revenue can be used to repurchase ONMX. Repurchased ONMX may be burned, linking protocol surplus to supply reduction.
 
-Buybacks are not guaranteed, should not impair treasury resilience, and should not operate as a promise of price support.
+Buybacks are not guaranteed and should not impair treasury resilience.
 
-### Stablecoin distributions
+### Stablecoin Airdrop
 
-Eligible stablecoin-based distributions can be used where permitted and implemented. These distributions are designed to avoid creating ONMX inflation, but they remain subject to legal, policy, eligibility, treasury, and operational constraints.
+Eligible stablecoin-based airdrop can be used where permitted and implemented. These distributions are designed to avoid creating ONMX inflation, but they remain subject to legal, policy, eligibility, treasury, and operational constraints.
 
 ### Operations & risk reserves
 

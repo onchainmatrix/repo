@@ -30,9 +30,9 @@
 
 ## ONMX
 
-* [ONMX Token Overview](06-onmx/token-overview.md)
-* [Supply, Allocation & Vesting](06-onmx/supply-allocation.md)
-* [Protocol Revenue & ONMX Value Capture](06-onmx/value-capture-distributions.md)
+* [ONMX Token Overview](tokenomics-and-utility/token-overview.md)
+* [Supply, Allocation & Vesting](tokenomics-and-utility/supply-allocation.md)
+* [Protocol Revenue & ONMX Value Capture](tokenomics-and-utility/value-capture-distributions.md)
 
 ## Seed Access
 

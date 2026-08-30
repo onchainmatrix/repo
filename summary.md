@@ -2,15 +2,15 @@
 
 ## Start Here
 
-* [Onchain Matrix](../)
+* [Onchain Matrix](./)
 * [Overview](01-start-here/overview.md)
 * [How It Works](01-start-here/how-it-works.md)
 * [Current Status](01-start-here/current-status.md)
 
 ## Protocol
 
-* [Protocol Architecture](02-protocol/architecture.md)
-* [Capital Lifecycle](02-protocol/capital-lifecycle.md)
+* [Protocol Architecture](protocol/architecture.md)
+* [Capital Lifecycle](protocol/capital-lifecycle.md)
 
 ## Treasury & Yield
 

@@ -49,7 +49,7 @@
 
 ## Roadmap
 
-* [Roadmap & Execution Plan](theroadmap/roadmap.md)
+* [Roadmap & Execution Plan](roadmap/roadmap.md)
 
 ## Resources
 

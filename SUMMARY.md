@@ -6,6 +6,8 @@
   * [Overview](start-here/overview.md)
   * [How It Works](start-here/how-it-works.md)
   * [Current Status](start-here/current-status.md)
+* [BNB Mainnet](start-here-1/README.md)
+  * [Overview](start-here-1/overview.md)
 * [Protocol](protocol/README.md)
   * [Protocol Architecture](protocol/architecture.md)
   * [Capital Lifecycle](protocol/capital-lifecycle.md)

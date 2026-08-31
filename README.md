@@ -1,7 +1,8 @@
 ---
 description: >-
-  Official documentation for Onchain Matrix, an onchain capital infrastructure
-  protocol on BNB Chain.
+  The canonical technical, economic, security, and operational documentation for
+  the Onchain Matrix protocol, an onchain capital infrastructure protocol on BNB
+  Chain.
 ---
 
 # Welcome to Onchain Matrix

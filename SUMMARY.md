@@ -45,4 +45,6 @@
 * [Legal](legal/README.md)
   * [Risk Disclosure & Important Notice](legal/risk-disclosure.md)
 * [BNB Mainnet](start-here-1/README.md)
-  * [Overview](start-here-1/overview.md)
+  * [Untitled](start-here-1/overview.md)
+* [Faq](start-here-2/README.md)
+  * [Is there a Whitepaper?](start-here-2/overview.md)

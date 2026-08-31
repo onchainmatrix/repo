@@ -27,9 +27,9 @@
 
 * [Risk Management Framework](risk-security/risk-management.md)
 * [Security Architecture](risk-security/security-architecture.md)
-* [Protocol Roles and Permissions](risk-security/protocol-roles-and-permissions.md)
-* [Security Center](risk-security/security-center.md)
-* [Oracle and Data Framework](risk-security/oracle-and-data-framework.md)
+* [Protocol Roles and Permissions](/broken/pages/6ddd0dc6a357a7ae751d4fb35ea9d26b4ff3db1a)
+* [Security Center](/broken/pages/2f9412e0e83dce0734eb0ea8503d3d60e669e184)
+* [Oracle and Data Framework](/broken/pages/b0d75c031e6c9e2c93b797a4ad086bef7e79b51c)
 
 ## Tokenomics
 
@@ -48,11 +48,11 @@
 ## Resources
 
 * [Contracts, Transparency & Public Verification](resources/contracts-transparency.md)
-* [Deployments and Contract Addresses](resources/deployments-and-contract-addresses.md)
+* [Deployments and Contract Addresses](/broken/pages/fdd61188e6bd720b0841c17ff05caa2dc501bf7e)
 
 ## Resources/Treasury
 
-* [ONMX Supply and Circulating Supply Transparency](resources_treasury/onmx-supply-and-circulating-supply-transparency.md)
+* [ONMX Supply and Circulating Supply Transparency](/broken/pages/e7416ff56174d1adc10463b32b85b6ddb0cf5157)
 
 ## Legal & Risk
 

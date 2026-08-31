@@ -1,85 +1,93 @@
 # Deployments and Contract Addresses
 
-A canonical registry of Onchain Matrix contracts, treasury addresses, lock and vesting infrastructure, and future protocol deployments.
+Onchain Matrix is designed so that important protocol activity can be independently verified onchain. This page is the canonical registry for production contract addresses, treasury control addresses, vesting and lock infrastructure, and future protocol deployments.
 
-Onchain Matrix is designed so that important protocol activity can be independently verified onchain wherever practical. This page should be treated as the primary documentation registry for official deployment addresses.
+## Verification standard
 
 {% hint style="warning" %}
-**Verification rule:** Never rely on a contract address copied from an unofficial website, social post, direct message, search result, or third-party profile. Verify addresses against the official Onchain Matrix website, this documentation, and the relevant block explorer before interacting.
+Always verify an address against the official Onchain Matrix website, this documentation, and the relevant block explorer before interacting with it. Addresses from social posts, direct messages, search results, or unofficial profiles should not be treated as authoritative.
 {% endhint %}
 
-## Current published addresses
+## Current production registry
 
-| Component                       | Network   | Status               | Address                                      | Verification                                              |
-| ------------------------------- | --------- | -------------------- | -------------------------------------------- | --------------------------------------------------------- |
-| ONMX Token                      | BNB Chain | Live / published     | `0x0D60CC169b26be7fCcf0dEcB3B1Ee337fc5cbE5C` | Verify on BscScan and the official Onchain Matrix website |
-| Treasury Address                | BNB Chain | Published            | `0x92f6fdc4cc90ce24e15c1bca4413f6a7e11af4be` | Verify on BscScan and official documentation              |
-| Seed Contract                   | BNB Chain | Publish when live    | —                                            | Official GitBook + BscScan                                |
-| Seed Vesting Contract           | BNB Chain | Publish when live    | —                                            | Official GitBook + vesting provider + BscScan             |
-| Treasury Reserve Lock / Vesting | BNB Chain | Implementation stage | —                                            | Official GitBook + third-party lock provider + BscScan    |
-| Presale Contract                | BNB Chain | Publish when live    | —                                            | Official GitBook + BscScan                                |
-| Liquidity Contracts             | BNB Chain | Publish when live    | —                                            | Official GitBook + DEX + BscScan                          |
-| Credit Contracts                | BNB Chain | Roadmap              | —                                            | Official GitBook + BscScan                                |
-| Pool / Marketplace Contracts    | BNB Chain | Roadmap              | —                                            | Official GitBook + BscScan                                |
+| Component                       | Network   | Status               | Address                                      | Verification                                                   |
+| ------------------------------- | --------- | -------------------- | -------------------------------------------- | -------------------------------------------------------------- |
+| ONMX Token                      | BNB Chain | Live                 | `0x0D60CC169b26be7fCcf0dEcB3B1Ee337fc5cbE5C` | BscScan + official Onchain Matrix channels                     |
+| Treasury Address                | BNB Chain | Published            | `0x92f6fdc4cc90ce24e15c1bca4413f6a7e11af4be` | BscScan + official Onchain Matrix documentation                |
+| Seed Contract                   | BNB Chain | Launch-stage         | Not yet published                            | Added to this registry when production deployment is activated |
+| Seed Vesting                    | BNB Chain | Launch-stage         | Not yet published                            | Production vesting contract + BscScan                          |
+| Treasury Reserve Lock / Vesting | BNB Chain | Implementation stage | Not yet published                            | Magna production deployment + BscScan                          |
+| Presale Contract                | BNB Chain | Planned              | Not yet published                            | Added at production deployment                                 |
+| Liquidity Contracts             | BNB Chain | Planned              | Not yet published                            | DEX deployment + BscScan                                       |
+| Credit Contracts                | BNB Chain | Roadmap              | Not yet deployed                             | Added before production activation                             |
+| Pool / Marketplace Contracts    | BNB Chain | Roadmap              | Not yet deployed                             | Added before production activation                             |
 
-{% hint style="info" %}
-Addresses not yet published above should not be inferred from test deployments or unofficial sources.
-{% endhint %}
+## Contract status
 
+A production address is listed only after the relevant deployment is intended for public protocol use. Test deployments, development contracts, and internal infrastructure are not official production addresses.
 
+The registry distinguishes between:
 
-## Upgradeable contracts
+* **Live** — deployed and available for current protocol use.
+* **Published** — an official address that can be independently verified onchain.
+* **Launch-stage** — implementation is being prepared for production use.
+* **Planned / Roadmap** — part of the protocol architecture but not yet a production deployment.
 
-Where a contract is upgradeable, the documentation should distinguish between the user-facing proxy and the active implementation.
+## Upgradeable components
 
-A verified proxy address alone does not explain who can change the implementation. For upgradeable components, the public registry should therefore identify the controlling authority and any applicable approval or delay process.
+Where a production component is upgradeable, the registry identifies the user-facing proxy, active implementation, controlling authority, and applicable approval or delay process.
 
-High-impact changes are intended to follow controlled approval paths rather than immediate unilateral execution. Upgrade authority should remain observable and can be reduced or disabled as the protocol reaches the appropriate maturity stage.
+A verified proxy address alone does not fully describe upgrade risk. The relevant control path matters because it determines who can change the implementation and under what conditions.
 
-## Treasury and multisig verification
+High-impact changes are designed to follow controlled approval paths rather than unilateral execution. Upgrade authority is intended to remain observable and can be reduced, constrained, or disabled as the protocol reaches the appropriate maturity stage.
 
-Treasury custody is designed around multi-party authorization rather than unilateral control by one wallet or key.
+## Treasury and multi-signature verification
 
-The official deployment registry should identify the treasury or multisig address used for critical authority without publishing personal signer identities or sensitive security information.
+Critical treasury authority is structured around multi-party authorization rather than unilateral control by a single wallet or key. Treasury control uses a Gnosis Safe multi-signature structure.
 
 Public verification can include:
 
-* The multisig address
-* Transaction history
-* Approval threshold where publicly configured
-* Executed treasury actions
-* Administrative transactions
-* Contract ownership transfers
-* Timelock transactions where applicable
+* the controlling Safe address,
+* configured approval threshold,
+* executed treasury transactions,
+* administrative transactions,
+* contract ownership transfers,
+* timelock activity where applicable.
+
+Personal signer identities, credentials, recovery material, and sensitive security information are not part of the public verification model.
 
 ## Vesting and lock infrastructure
 
-Token allocations that are subject to vesting or long-duration restrictions should be linked to independently verifiable infrastructure once implemented.
+Token allocations subject to vesting or long-duration restrictions are intended to use independently verifiable infrastructure.
 
-For each vesting or lock arrangement, publish:
+The **72.5% Treasury Reserve & LP allocation** is intended to use a long-duration third-party structure over an **eight-year period**. **Magna** has been selected as the infrastructure provider for this reserve structure. The production contract or vault address will become part of this registry once the deployment is live and independently verifiable.
 
-* Allocation covered
-* Token amount
-* Vesting or lock provider
-* Relevant contract or vault address
-* Start condition or effective date
-* Cliff or vesting terms where applicable
-* Claim or release mechanics
-* Public verification link
-
-The Treasury Reserve & LP allocation is intended to use a long-duration third-party structure over an eight-year period. Magna has been selected as the intended infrastructure provider; final contract addresses and implementation details should be published here only after the production setup is live and verifiable.
+The **Seed allocation** is structured with a **6-month cliff followed by 18 months of linear vesting**, with monthly claim availability after the cliff. The production vesting deployment is the authoritative source for claim and release mechanics.
 
 ## Source hierarchy
 
-If information conflicts across channels, use the following order of authority for deployment data:
+For deployment data, the following order of authority applies:
 
-1. Live production contracts and onchain state
-2. Current official Onchain Matrix GitBook
-3. Current official Onchain Matrix website
-4. Current transaction-specific Terms or interface
-5. Archived presentations, Litepapers, announcements, or social posts
+{% stepper %}
+{% step %}
+### Live production contracts and current onchain state
+{% endstep %}
 
-{% hint style="info" %}
-Historical documents may describe an earlier deployment state and should not override current onchain records.
-{% endhint %}
+{% step %}
+### Current official Onchain Matrix GitBook
+{% endstep %}
 
+{% step %}
+### Current official Onchain Matrix website
+{% endstep %}
+
+{% step %}
+### Current transaction-specific Terms or protocol interface
+{% endstep %}
+
+{% step %}
+### Archived presentations, Litepapers, announcements, or social posts
+
+Historical materials may describe an earlier deployment state and do not override current production contracts or onchain records.
+{% endstep %}
+{% endstepper %}

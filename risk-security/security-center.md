@@ -1,49 +1,72 @@
 # Security Center
 
-A central reference for Onchain Matrix security controls, review status, responsible disclosure, incident response, and public security evidence.
+Security is part of the core Onchain Matrix architecture across custody, smart contracts, infrastructure, access control, upgrades, monitoring, and incident response.
 
-For a protocol designed to manage capital, security is not a separate feature. It is part of custody, contracts, infrastructure, access control, monitoring, upgrades, and operational procedures.
+No security framework can eliminate all risk. The objective is to reduce attack surface, limit authority, make critical activity observable, and improve the protocol's ability to detect and respond to abnormal conditions.
 
 ## Security model
 
-Onchain Matrix is designed around multiple layers of control:
+Onchain Matrix is designed around six layers of control:
 
-1. **Multi-party treasury custody** — critical treasury authority requires multiple approvals rather than unilateral control.
-2. **Privileged access security** — administrative access is permissioned, segmented, and minimized.
-3. **Smart-contract security** — core contracts follow structured development, testing, verification, review, and deployment procedures.
-4. **Controlled upgrades** — high-impact changes use defined approval paths and delay mechanisms where implemented.
-5. **Monitoring** — contract events, privileged actions, treasury movements, infrastructure alerts, oracle issues, and abnormal protocol behavior can be monitored.
-6. **Emergency response** — protective controls can restrict activity where technically appropriate during a security event.
+{% stepper %}
+{% step %}
+## Multi-party treasury custody
 
-{% hint style="info" %}
-No security architecture can eliminate all risk. The objective is to reduce attack surface, limit authority, increase detection, and improve the protocol's ability to respond to abnormal conditions.
-{% endhint %}
+Critical treasury authority requires multiple approvals rather than unilateral control.
+{% endstep %}
+
+{% step %}
+## Privileged access security
+
+Administrative access is permissioned, segmented, and minimized.
+{% endstep %}
+
+{% step %}
+## Smart-contract security
+
+Production contracts follow structured development, testing, verification, review, and deployment procedures.
+{% endstep %}
+
+{% step %}
+## Controlled upgrades
+
+High-impact changes follow defined approval paths and delay mechanisms where implemented.
+{% endstep %}
+
+{% step %}
+## Continuous monitoring
+
+Treasury movements, privileged actions, contract state, infrastructure events, and oracle conditions can be monitored for abnormal behavior.
+{% endstep %}
+
+{% step %}
+## Emergency response
+
+Protective controls can restrict affected activity where technically appropriate during a security event.
+{% endstep %}
+{% endstepper %}
 
 ## Security status
 
-| Area                             | Current documentation status                                               |
-| -------------------------------- | -------------------------------------------------------------------------- |
-| Multi-signature treasury control | Part of the protocol security architecture                                 |
-| Public contract verification     | Required for production deployments where supported                        |
-| Controlled upgrade procedures    | Part of the protocol design                                                |
-| Monitoring and incident response | Part of the operational security model                                     |
-| External audit reports           | Publish here as completed                                                  |
-| Public bug bounty                | Do not assume active unless explicitly listed here                         |
-| Incident history                 | Publish material incidents and post-incident information where appropriate |
-
-{% hint style="warning" %}
-Until an external audit report is published through an official Onchain Matrix channel, users should not assume that a particular contract has been externally audited.
-{% endhint %}
+| Area                             | Current status                                                                   |
+| -------------------------------- | -------------------------------------------------------------------------------- |
+| Multi-signature treasury control | Part of the active protocol security architecture                                |
+| Public contract verification     | Required for production deployments where supported                              |
+| Controlled upgrade procedures    | Part of the protocol design                                                      |
+| Monitoring and incident response | Part of the operational security model                                           |
+| External audit reports           | Listed after completion and public release                                       |
+| Public bug bounty                | Listed only when an active program is formally launched                          |
+| Incident history                 | Material incidents and post-incident information are published where appropriate |
 
 ## Smart-contract security lifecycle
 
-Production smart contracts should move through a disciplined lifecycle that can include:
+Material production contracts are designed to move through a disciplined lifecycle that can include:
 
 * specification and architecture review,
 * threat modeling,
 * unit and integration testing,
-* permission and role review,
-* edge-case and failure-mode testing,
+* role and permission review,
+* failure-mode and edge-case testing,
 * static or automated analysis where appropriate,
 * internal review,
 * external review or audit for material contracts,
@@ -51,31 +74,20 @@ Production smart contracts should move through a disciplined lifecycle that can 
 * post-deployment monitoring.
 
 {% hint style="warning" %}
-Security review does not guarantee that a contract is free of vulnerabilities.
+Security reviews reduce risk but do not guarantee that a contract is free of vulnerabilities.
 {% endhint %}
 
-## Audit and review registry
+## Audits and independent review
 
-Published security reports should be listed here in a consistent format.
+Only completed, publicly accessible security reviews are represented as completed audits.
 
-| Component                     | Reviewer                   | Review type                                           | Date | Report                                                | Status                     |
-| ----------------------------- | -------------------------- | ----------------------------------------------------- | ---- | ----------------------------------------------------- | -------------------------- |
-| ONMX Token                    | —                          | —                                                     | —    | Publish when available                                | Not listed                 |
-| Seed / Sale Contracts         | —                          | —                                                     | —    | Publish when available                                | Not listed                 |
-| Vesting / Lock Infrastructure | Third-party infrastructure | Provider security information + implementation review | —    | Publish relevant links when live                      | Implementation stage       |
-| Treasury Automation           | —                          | —                                                     | —    | Publish before or as material automation is activated | Roadmap / activation stage |
-| Credit Contracts              | —                          | —                                                     | —    | Publish before or with production launch              | Roadmap                    |
-| Pool / Marketplace Contracts  | —                          | —                                                     | —    | Publish before or with production launch              | Roadmap                    |
-
-Only completed, publicly accessible reviews should be represented as completed audits.
+Audit reports and independent reviews are linked from official Onchain Matrix channels after publication. The live production deployment and its corresponding report should always be matched by contract address and version where applicable.
 
 ## Responsible disclosure
 
-Security researchers who identify a potential vulnerability should use the official contact method published by Onchain Matrix.
+Security researchers who identify a potential vulnerability can report it through the official contact route published by Onchain Matrix.
 
-Until a dedicated security-disclosure channel is published, use only the contact route listed on the official Onchain Matrix website or documentation.
-
-A vulnerability report should ideally include:
+A useful vulnerability report includes:
 
 * affected contract, interface, or system,
 * network and address where applicable,
@@ -83,16 +95,10 @@ A vulnerability report should ideally include:
 * reproduction steps or proof of concept,
 * potential impact,
 * recommended mitigation if known,
-* a secure way to contact the researcher.
+* a secure method of contact.
 
-Researchers should avoid publicly disclosing an exploitable issue before the protocol has had a reasonable opportunity to investigate and mitigate it.
-
-## Bug bounty
-
-A public bug-bounty program should be linked here if and when activated.
-
-{% hint style="warning" %}
-The absence of a published bounty should not be interpreted as permission to exploit a vulnerability or access systems without authorization.
+{% hint style="info" %}
+Researchers are encouraged to avoid public disclosure of an exploitable issue before the protocol has had a reasonable opportunity to investigate and mitigate the risk.
 {% endhint %}
 
 ## Monitoring
@@ -106,64 +112,43 @@ Security monitoring can cover:
 * unexpected protocol-state changes,
 * oracle anomalies,
 * infrastructure authentication events,
-* service health and availability,
+* service availability,
 * suspicious interaction patterns.
 
-Monitoring should focus on actionable signals without exposing sensitive internal infrastructure or operational procedures.
+Monitoring focuses on actionable signals without exposing sensitive internal infrastructure or response procedures.
 
 ## Incident response
 
-If a material security event occurs, response actions can include, where technically and operationally appropriate:
+A material security event can trigger a controlled response sequence:
 
-{% stepper %}
-{% step %}
-## Identify and validate the event
-{% endstep %}
+```mermaid
+flowchart TB
+    A[Detect & Validate] --> B[Restrict Affected Activity]
+    B --> C[Protect Unaffected Capital]
+    C --> D[Preserve Logs & Onchain Evidence]
+    D --> E[Investigate Scope & Root Cause]
+    E --> F[Remediate Under Approved Controls]
+    F --> G[Validate Before Restoration]
+    G --> H[Restore Activity]
+    H --> I[Publish Material Information When Safe]
+```
 
-{% step %}
-## Restrict the affected activity
-{% endstep %}
-
-{% step %}
-## Protect unaffected capital and infrastructure
-{% endstep %}
-
-{% step %}
-## Preserve logs and onchain evidence
-{% endstep %}
-
-{% step %}
-## Investigate scope and root cause
-{% endstep %}
-
-{% step %}
-## Remediate or upgrade affected systems under the applicable approval process
-{% endstep %}
-
-{% step %}
-## Restore activity only after validation
-{% endstep %}
-
-{% step %}
-## Publish material information when doing so no longer creates additional security risk
-{% endstep %}
-{% endstepper %}
-
-Emergency powers are themselves sensitive and should remain subject to controlled custody and access principles.
+{% hint style="warning" %}
+Emergency powers are themselves sensitive and remain subject to controlled custody and access principles.
+{% endhint %}
 
 ## Public security evidence
 
-Security claims should be tied to evidence wherever practical. Useful evidence can include:
+Security claims are designed to be supported by evidence wherever practical, including:
 
-* verified deployed contracts,
-* multisig transactions,
+* verified production contracts,
+* multisig transaction history,
 * role and permission data,
 * timelock activity,
-* published audit reports,
-* security-review reports,
+* published audit or review reports,
 * onchain events,
-* documented deployment procedures,
-* incident reports.
+* deployment records,
+* incident reports where applicable.
 
 ## User security checklist
 
@@ -171,9 +156,9 @@ Before interacting with Onchain Matrix:
 
 * use the official website and GitBook,
 * verify the network before signing,
-* confirm the contract address against **Deployments & Contract Addresses**,
-* verify the address on the relevant block explorer,
+* confirm the contract address against the official deployment registry,
+* verify the address on BscScan,
 * do not trust unsolicited direct messages,
-* do not share seed phrases or private keys,
-* review transaction permissions before signing,
-* confirm that a product marked as roadmap is actually live before interacting with any claimed deployment.
+* never share seed phrases or private keys,
+* review permissions before signing a transaction,
+* confirm that a roadmap feature has a published production deployment before using it.

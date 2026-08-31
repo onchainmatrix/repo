@@ -1,161 +1,119 @@
 # Protocol Roles and Permissions
 
-How authority is separated across treasury custody, protocol operations, risk controls, upgrades, data infrastructure, and emergency response.
+Onchain Matrix separates authority across treasury custody, routine execution, risk controls, upgrades, data infrastructure, and emergency response. The objective is to reduce single-point failure and limit the impact of any one compromised role.
 
-Onchain Matrix is designed to reduce dependence on unilateral human control. Sensitive authority should be separated by function, limited to what each role requires, and made publicly observable where doing so does not create unnecessary security risk.
+No operational role is intended to have unrestricted authority across the entire protocol.
 
-## Core principle
+## Control model
 
-No operational role should automatically have unrestricted authority over every part of the protocol.
+The protocol separates six core control functions:
 
-The control model is intended to separate:
+1. Treasury custody
+2. Treasury operations and automation
+3. Risk administration
+4. Contract administration and upgrades
+5. Emergency controls
+6. Oracle and data infrastructure
 
-* custody of treasury capital,
-* routine protocol execution,
-* risk-policy administration,
-* contract upgrades,
-* emergency actions,
-* oracle and data inputs,
-* future credit-market operations.
-
-This separation reduces single-point failure and makes it easier to understand what a compromised role could and could not do.
+Future credit-market contracts introduce additional roles for origination, servicing, monitoring, pools, and resolution.
 
 ## Role framework
 
-| Role                               | Intended responsibility                                 | Typical permitted actions                                                                      | Intended limitations                                                                                                        |
-| ---------------------------------- | ------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| Treasury Multi-Sig                 | Critical treasury custody and high-impact approvals     | Approve treasury actions, administrative transactions, ownership changes where authorized      | No single signer should be able to act alone; signer identities and recovery material are not public operational data       |
-| Treasury Operations / Automation   | Execute approved treasury policy                        | Rebalance or deploy capital within approved strategies, limits, and controls                   | Cannot exceed approved exposure limits or independently rewrite treasury policy                                             |
-| Risk Administration                | Maintain approved risk parameters                       | Adjust supported limits, caps, collateral parameters, or restrictions within authorized ranges | Should not provide unrestricted custody or withdrawal authority                                                             |
-| Upgrade / Administrative Authority | Manage controlled contract changes                      | Execute approved upgrades or configuration changes                                             | High-impact changes should follow defined approvals and delays where implemented                                            |
-| Emergency Control                  | Reduce damage during abnormal events                    | Pause or restrict supported activity where technically available                               | Emergency authority should be narrow, observable, and governed by the same custody discipline as other privileged actions   |
-| Oracle / Data Infrastructure       | Supply or validate external data used by protocol logic | Provide market prices, valuation inputs, or other approved data                                | Data providers should not control treasury custody; bad or stale data should be subject to validation and fallback controls |
-| Credit-Market Roles                | Operate future collateralized-credit infrastructure     | Origination, servicing, monitoring, resolution, or pool functions as implemented               | Powers depend on the specific credit contract and should be documented before launch                                        |
-
-The exact production addresses and permissions for implemented roles should be published in **Deployments & Contract Addresses** when live.
+| Role                               | Primary responsibility                                  | Permitted scope                                                                                | Structural limitation                                                          |
+| ---------------------------------- | ------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| Treasury Multi-Sig                 | Critical treasury custody and high-impact approvals     | Treasury transactions and authorized administrative actions                                    | No single signer can unilaterally exercise multi-signature authority           |
+| Treasury Operations / Automation   | Execute approved treasury policy                        | Deploy or rebalance capital inside approved strategies, limits, and controls                   | Cannot independently remove treasury-wide limits or rewrite policy             |
+| Risk Administration                | Maintain approved risk parameters                       | Adjust supported caps, collateral parameters, limits, or restrictions within authorized ranges | Does not receive unrestricted treasury withdrawal authority                    |
+| Upgrade / Administrative Authority | Manage controlled contract changes                      | Execute authorized upgrades and configuration changes                                          | High-impact changes follow the applicable approval path and delay process      |
+| Emergency Control                  | Reduce damage during abnormal conditions                | Pause or restrict supported activity where implemented                                         | Narrowly scoped and subject to controlled custody and access rules             |
+| Oracle / Data Infrastructure       | Supply or validate external data used by protocol logic | Market prices, valuation inputs, risk data, and reporting inputs                               | Separate from treasury custody and subject to validation and fallback controls |
+| Credit-Market Roles                | Operate future collateralized-credit infrastructure     | Origination, servicing, monitoring, pool administration, and resolution as implemented         | Authority is limited by the specific credit contract and published parameters  |
 
 ## Treasury custody
 
 Critical treasury authority is designed around multi-party authorization rather than a single wallet or private key.
 
-Treasury custody should provide:
+The treasury custody structure is designed to provide:
 
-* multiple independent approvals for sensitive actions,
-* auditable transaction history,
-* separation between proposal and execution where practical,
-* restricted administrative access,
-* controlled signer changes,
-* operational procedures that do not expose sensitive recovery information.
+* Multiple approvals for sensitive actions
+* Auditable onchain transaction history
+* Separation between routine execution and high-impact policy changes
+* Restricted administrative access
+* Controlled signer changes
+* Operational procedures that protect recovery material and sensitive access information
 
-Public transparency should focus on the controlling address, approval structure, and executed actions—not the personal identities or security details of individual signers.
+Public transparency focuses on the controlling address, approval structure, and executed actions rather than the personal identities of individual signers.
 
 ## Routine execution vs. policy authority
 
-Routine capital management and high-level policy are different functions.
+Treasury operations and treasury policy are separate functions.
 
-Treasury automation or operating wallets may be permitted to execute activity within predefined constraints. Examples can include approved allocation ranges, supported strategies, liquidity limits, or risk thresholds.
+Operational wallets or automation can execute approved actions inside predefined constraints. These constraints can include approved strategies, allocation ranges, liquidity requirements, exposure limits, and market-response conditions.
 
-They should not automatically be able to:
+Routine execution is not intended to provide authority to:
 
-* remove treasury-wide limits,
-* add arbitrary high-risk strategies,
-* transfer unrestricted treasury capital,
-* change critical ownership,
-* bypass emergency or upgrade controls.
+* Remove treasury-wide controls
+* Add arbitrary high-risk strategies
+* Transfer unrestricted treasury capital
+* Change critical ownership
+* Bypass upgrade or emergency controls
 
-The purpose of automation is to enforce disciplined execution, not to create unlimited autonomous authority.
+Automation exists to enforce disciplined execution, not to create unlimited autonomous authority.
 
 ## Risk administration
 
-Risk administration governs the conditions under which capital may be exposed.
+Risk administration governs the conditions under which capital can be exposed.
 
-Potential controls can include:
+The control surface can include:
 
-* collateral eligibility,
-* LTV thresholds,
-* debt ceilings,
-* borrower or pool caps,
-* strategy exposure limits,
-* liquidity requirements,
-* oracle safeguards,
-* market-response thresholds.
+* Collateral eligibility
+* LTV thresholds
+* Warning and liquidation zones
+* Debt ceilings
+* Borrower or pool caps
+* Strategy exposure limits
+* Liquidity requirements
+* Oracle safeguards
+* Market-response thresholds
 
-Risk roles should be able to reduce or constrain risk without automatically gaining unrelated treasury-custody powers.
+Risk roles are designed to constrain or reduce exposure without automatically gaining unrelated treasury-custody powers.
 
 ## Upgrade authority
 
-Upgradeable infrastructure can be useful during early protocol deployment, but upgrade authority is itself a material risk.
+Upgradeable infrastructure can provide flexibility during early protocol deployment, but upgrade authority is itself a material control risk.
 
-{% stepper %}
-{% step %}
-### Proposed through an authorized path
+High-impact changes are designed around a controlled sequence:
 
-High-impact changes should be proposed through an authorized path.
-{% endstep %}
+```mermaid
+flowchart TB
+    A[Authorized Proposal] --> B[Review & Approval]
+    B --> C[Delay / Timelock Where Applicable]
+    C --> D[Onchain Execution]
+    D --> E[Deployment Registry Update]
+```
 
-{% step %}
-### Reviewed and approved
-
-Changes should be reviewed and approved under the applicable control structure.
-{% endstep %}
-
-{% step %}
-### Delayed where implemented
-
-Changes should be delayed where a timelock or execution delay is implemented.
-{% endstep %}
-
-{% step %}
-### Executed transparently onchain
-
-Changes should be executed transparently onchain.
-{% endstep %}
-
-{% step %}
-### Reflected in the deployment registry
-
-Changes should be reflected in the deployment registry.
-{% endstep %}
-{% endstepper %}
-
-As contracts mature, upgrade authority can be reduced, constrained, or disabled where technically appropriate.
+As the protocol matures, upgrade authority can be reduced, constrained, or disabled where technically appropriate.
 
 ## Emergency authority
 
-Emergency controls exist to reduce potential damage during abnormal conditions, not to provide a general-purpose administrative shortcut.
+Emergency controls exist to reduce potential damage during abnormal conditions. Depending on the relevant contract, supported actions can include:
 
-Depending on the relevant contract, emergency actions may include:
+* Pausing new activity
+* Restricting selected operations
+* Reducing exposure
+* Disabling an affected integration
+* Blocking a compromised execution path
 
-* pausing new activity,
-* restricting selected operations,
-* reducing exposure,
-* disabling an affected integration,
-* blocking a compromised execution path.
-
-Emergency authority should remain as narrow as technically practical and should not bypass multi-party custody for unrelated treasury transfers.
-
-## Oracle and data permissions
-
-Price and data infrastructure can influence valuations, collateral health, liquidation behavior, and treasury reporting.
-
-Oracle and data roles should therefore be separated from asset custody and should operate under independent validation, staleness, deviation, and fallback controls where applicable.
-
-See **Oracle & Data Framework** for the protocol's data-control principles.
+Emergency authority is intended to remain narrow, observable, and separate from unrestricted treasury transfers.
 
 ## Public accountability
 
-For privileged roles that exist onchain, the protocol should publish enough information to allow independent review of:
+For privileged onchain roles, Onchain Matrix is designed to expose enough information for independent review of:
 
-* the controlling address,
-* the role or permission granted,
-* the contract to which the permission applies,
-* material changes to that permission,
-* executed privileged actions.
+* Controlling addresses
+* Granted permissions
+* The contracts to which permissions apply
+* Material changes to those permissions
+* Executed privileged actions
 
-Sensitive credentials, signer identities, recovery material, and internal infrastructure details should not be published merely for transparency.
-
-## Roles can evolve
-
-The role model will evolve as treasury automation, credit markets, tokenized debt, and security infrastructure mature.
-
-The live contracts and current role registry should take precedence over architectural descriptions if the implementation changes.
+Sensitive credentials, signer identities, recovery material, and internal infrastructure details remain protected.

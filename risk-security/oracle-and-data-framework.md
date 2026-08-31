@@ -1,84 +1,82 @@
 # Oracle and Data Framework
 
-How Onchain Matrix is designed to source, validate, and use market and protocol data for treasury management, collateralized credit, risk controls, and reporting.
+Onchain Matrix uses market and protocol data to support treasury management, collateralized credit, risk controls, and reporting. Data quality is treated as a risk-management issue because a correct smart contract can still produce an unsafe outcome when its inputs are stale, manipulated, or economically unreliable.
 
-Onchain Matrix depends on external and onchain data for objective execution. Incorrect, stale, manipulated, or illiquid pricing can create material loss even when the surrounding smart contracts operate as designed.
-
-Oracle and data risk are therefore treated as part of the protocol's risk framework rather than as a simple technical integration.
-
-## Where data can be used
+## Data use across the protocol
 
 Data inputs can support:
 
-* Treasury valuation
-* Allocation and rebalancing decisions
-* Strategy monitoring
-* Collateral valuation
-* LTV calculations
-* Warning or margin zones
-* Liquidation thresholds
-* Debt-ceiling and exposure monitoring
-* RWA valuation
-* Treasury reporting
-* Performance measurement
-* Circuit breakers and risk-off controls
+* treasury valuation,
+* allocation and rebalancing decisions,
+* strategy monitoring,
+* collateral valuation,
+* LTV calculations,
+* warning or margin zones,
+* liquidation thresholds,
+* debt-ceiling and exposure monitoring,
+* RWA valuation,
+* treasury reporting,
+* performance measurement,
+* circuit breakers and risk-off controls.
 
-Not every function requires the same data source or update frequency.
+Not every function requires the same source, update frequency, or validation model.
 
 ## Data-source principles
 
-Data sources should be evaluated based on the function they serve. Selection criteria can include:
+Data sources are evaluated according to the function they serve. Relevant criteria include:
 
-* Reliability
-* Market coverage
-* Liquidity and market depth of the referenced asset
-* Resistance to manipulation
-* Update frequency
-* Transparency of methodology
-* Operational history
-* Decentralization where appropriate
-* Fallback availability
-* Legal or settlement relevance for RWAs
-* Compatibility with the relevant network and contract architecture
+* reliability,
+* market coverage,
+* executable liquidity and market depth,
+* resistance to manipulation,
+* update frequency,
+* transparency of methodology,
+* operational history,
+* decentralization where appropriate,
+* fallback availability,
+* legal and settlement relevance for RWAs,
+* compatibility with BNB Chain and the relevant contract architecture.
 
-A widely used data source can still be unsuitable if the underlying market is thin, fragmented, stale, or operationally unreliable.
+A widely used market price can still be unsuitable when the underlying market is thin, fragmented, stale, or difficult to exit.
 
 ## Price validation
 
-Where appropriate, protocol logic should be able to reject or restrict data that fails defined validation conditions.
+Protocol logic can restrict or reject data that fails defined validation conditions.
 
-Potential controls can include:
+Potential controls include:
 
-* **Staleness checks** — reject data older than the permitted time window
-* **Deviation checks** — flag or restrict an abnormal move from a prior or reference price
-* **Cross-source comparison** — compare multiple observations where technically appropriate
-* **Market-depth checks** — avoid treating a quoted price as fully executable when liquidity is insufficient
-* **Fallback logic** — define what happens when a primary source fails or becomes unreliable
-* **Circuit breakers** — restrict activity rather than continue using questionable data
+* **Staleness checks** — data older than the permitted window can be rejected.
+* **Deviation checks** — abnormal price moves can trigger additional validation or restrictions.
+* **Cross-source comparison** — multiple observations can be compared where appropriate.
+* **Market-depth checks** — a quoted price is not treated as fully executable when liquidity is insufficient.
+* **Fallback logic** — approved behavior is defined for unavailable or unreliable primary sources.
+* **Circuit breakers** — protocol activity can be restricted rather than continued with questionable data.
 
-The correct response to bad data is not always to substitute another price automatically. In some conditions, pausing or restricting new exposure can be safer.
+{% hint style="info" %}
+The safest response to bad data is not always automatic substitution. In some market conditions, restricting new exposure is preferable to forcing continuity.
+{% endhint %}
 
 ## Collateral valuation
 
-Collateralized credit requires more than a displayed market price.
+Collateralized credit requires more than a displayed market price. Approved collateral is also evaluated for:
 
-Approved collateral should also be evaluated for:
+* liquidity,
+* volatility,
+* executable market depth,
+* stressed-market slippage,
+* venue reliability,
+* custody and settlement characteristics,
+* oracle availability,
+* concentration risk,
+* legal or issuer structure where relevant.
 
-* Liquidity
-* Volatility
-* Executable market depth
-* Slippage under stressed conditions
-* Venue reliability
-* Custody and settlement characteristics
-* Oracle availability
-* Concentration risk
-* Legal or issuer structure where relevant
-
-A position can appear overcollateralized and still create losses if the collateral cannot be sold efficiently during a stressed market.
+{% hint style="warning" %}
+An overcollateralized position can still generate loss if the collateral cannot be exited efficiently during stress.
+{% endhint %}
 
 ## LTV and liquidation data
 
-For credit positions, price data can influence:
+For credit positions, validated market data can influence:
 
 {% stepper %}
 {% step %}
@@ -102,72 +100,52 @@ For credit positions, price data can influence:
 {% endstep %}
 {% endstepper %}
 
-The live credit implementation should publish the exact oracle source, calculation conventions, update assumptions, and fallback procedures for each supported collateral type before that collateral is enabled.
+Before a collateral type is enabled in a live credit product, the production implementation is expected to expose the applicable data source, valuation convention, update assumptions, and fallback behavior.
 
 ## RWA data
 
-Tokenized RWAs can require additional data beyond an onchain market price.
+Tokenized RWAs can require additional inputs beyond an onchain spot price. Depending on the instrument, relevant data can include:
 
-Depending on the instrument, relevant inputs can include:
+* issuer or administrator NAV,
+* exchange or market price,
+* redemption value,
+* accrued income,
+* settlement status,
+* custody status,
+* trading hours,
+* stale-price windows,
+* currency conversion rates.
 
-* Issuer or administrator NAV
-* Exchange or market price
-* Redemption value
-* Accrued income
-* Settlement status
-* Custody status
-* Trading hours
-* Stale-price windows
-* Currency conversion rates
+{% hint style="warning" %}
+Tokenization does not eliminate issuer, custody, pricing, legal, redemption, or settlement risk.
+{% endhint %}
 
-A tokenized representation does not eliminate issuer, custody, pricing, legal, redemption, or settlement risk.
+## Execution data vs. reporting data
 
-## Treasury reporting data
+Treasury reporting distinguishes between data used for execution and data used for public reporting.
 
-Treasury reporting should distinguish between data used for execution and data used for reporting.
-
-A dashboard can display frequent indicative values, while an official period-end treasury report can use a defined valuation timestamp and reconciliation process.
-
-See **Treasury Reporting & Performance Methodology** for reporting definitions.
+A dashboard can display frequent indicative values, while an official period-end report can use a defined valuation timestamp and reconciliation process. This separation reduces ambiguity between live operational estimates and formal performance reporting.
 
 ## Data-provider concentration
 
-Using one provider for every asset can create concentration risk. Where appropriate, the protocol can diversify data dependencies or use independent checks.
+Critical protocol functions are not intended to depend on an unexamined single source. Where appropriate, independent checks or diversified data dependencies can reduce provider concentration risk.
 
-The objective is not to maximize the number of providers. It is to ensure that the reliability of a critical protocol function does not depend on an unexamined single source.
+The objective is not to maximize the number of providers. It is to make the reliability assumptions of each critical function explicit and testable.
 
 ## Failure behavior
 
-When data is missing, stale, inconsistent, or materially unreliable, protocol behavior should favor protection over forced continuity.
+When required data is missing, stale, inconsistent, or materially unreliable, protocol behavior is designed to favor protection over forced continuity.
 
-Depending on the affected function, responses can include:
+Responses can include:
 
-* Rejecting a transaction
-* Pausing new borrowing
-* Preventing new deployment
-* Reducing exposure
-* Switching to an approved fallback
-* Requiring manual or multisig review
-* Temporarily disabling the affected asset or strategy
+* rejecting a transaction,
+* pausing new borrowing,
+* preventing new deployment,
+* reducing exposure,
+* switching to an approved fallback,
+* requiring controlled manual or multisig review,
+* temporarily disabling the affected asset or strategy.
 
-## Public documentation
-
-When production oracle infrastructure is selected, the protocol should publish, where appropriate:
-
-* Provider or data-source name
-* Supported asset or market
-* Feed or contract address
-* Network
-* Update or heartbeat assumptions
-* Staleness policy
-* Deviation or validation logic
-* Fallback behavior
-* Material changes to the data architecture
-
-Provider names should not be treated as final until the applicable production integration is live and verified.
-
-## Oracle risk remains material
-
-No oracle framework can guarantee accurate or executable pricing under every market condition.
-
-Oracle controls are designed to reduce the probability and impact of bad data. They do not remove market, liquidity, smart-contract, issuer, or settlement risk.
+{% hint style="warning" %}
+No oracle framework can guarantee accurate or executable pricing under every market condition. Oracle controls reduce risk; they do not remove market, liquidity, smart-contract, issuer, or settlement risk.
+{% endhint %}

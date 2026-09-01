@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Welcome to Onchain Matrix](README.md)
-* [Summary](summary.md)
 * [Start-here](start-here/README.md)
   * [Overview](start-here/overview.md)
   * [How It Works](start-here/how-it-works.md)
@@ -46,5 +45,6 @@
   * [Risk Disclosure & Important Notice](legal/risk-disclosure.md)
 * [BNB Mainnet](start-here-1/README.md)
   * [Untitled](start-here-1/overview.md)
+* [Summary](summary.md)
 * [Faq](start-here-2/README.md)
   * [Is there a Whitepaper?](start-here-2/overview.md)

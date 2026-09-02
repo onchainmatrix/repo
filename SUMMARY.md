@@ -7,13 +7,17 @@
 * [Overview](start-here/overview.md)
 * [How It Works](start-here/how-it-works.md)
 * [Current Status](start-here/current-status.md)
+* [Overview](start-here/overview.md)
+
+## Protocol
+
+* [Protocol Architecture](protocol/architecture.md)
+* [Capital Lifecycle](protocol/capital-lifecycle.md)
+* [Smart Contract Architecture](protocol/smart-contract-architecture.md)
 
 ***
 
-* [Protocol](protocol/README.md)
-  * [Protocol Architecture](protocol/architecture.md)
-  * [Capital Lifecycle](protocol/capital-lifecycle.md)
-  * [Smart Contract Architecture](protocol/smart-contract-architecture.md)
+* [Protocol](protocol-1.md)
 * [Treasury](treasury/README.md)
   * [Treasury & Yield Engine](treasury/treasury-engine.md)
   * [Capital Allocation & Yield Framework](treasury/allocation-yield.md)

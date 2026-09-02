@@ -44,5 +44,5 @@ Onchain Matrix is organized around three connected layers:
 * Medium: [https://medium.com/@onchainmatrix](https://medium.com/@onchainmatrix)
 * GitBook: [https://onchainmatrix.gitbook.io/onchain-matrix/](https://onchainmatrix.gitbook.io/onchain-matrix/)
 * Linktree: [https://linktr.ee/OnchainMatrix](https://linktr.ee/OnchainMatrix)
-* Coin Market Cap: [https://coinmarketcap.com/community/profile/Onchain\_Matrix/](https://coinmarketcap.com/community/profile/Onchain_Matrix/)
+* CoinMarket Cap: [https://coinmarketcap.com/community/profile/Onchain\_Matrix/](https://coinmarketcap.com/community/profile/Onchain_Matrix/)
 {% endhint %}

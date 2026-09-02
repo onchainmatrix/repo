@@ -33,11 +33,11 @@ hidden: true
 
 ## Risk & Security
 
-* [Risk Management Framework](risk-security/risk-management.md)
-* [Security Architecture](risk-security/security-architecture.md)
-* [Protocol Roles and Permissions](risk-security/protocol-roles-and-permissions.md)
-* [Security Center](risk-security/security-center.md)
-* [Oracle and Data Framework](risk-security/oracle-and-data-framework.md)
+* [Risk Management Framework](risk-and-security/risk-management.md)
+* [Security Architecture](risk-and-security/security-architecture.md)
+* [Protocol Roles and Permissions](risk-and-security/protocol-roles-and-permissions.md)
+* [Security Center](risk-and-security/security-center.md)
+* [Oracle and Data Framework](risk-and-security/oracle-and-data-framework.md)
 
 ## Tokenomics
 

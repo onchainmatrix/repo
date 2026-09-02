@@ -23,20 +23,23 @@
 * [Treasury Execution and Automation Architecture](treasury/treasury-execution-and-automation-architecture.md)
 * [Treasury & Yield Engine](treasury/treasury-engine.md)
 
+## Credit
+
+* [Hybrid Collateralized Credit](credit/credit-overview.md)
+* [Credit Lifecycle & Tokenized Debt](credit/credit-lifecycle-tokenized-debt.md)
+* [Credit Protocol Architecture](credit/credit-protocol-architecture.md)
+* [Tokenized Debt and Secondary Market Architecture](credit/tokenized-debt-and-secondary-market-architecture.md)
+
+## Risk & Security
+
+* [Risk Management Framework](risk-and-security/risk-management.md)
+* [Security Architecture](risk-and-security/security-architecture.md)
+* [Protocol Roles and Permissions](risk-and-security/protocol-roles-and-permissions.md)
+* [Security Center](risk-and-security/security-center.md)
+* [Oracle and Data Framework](risk-and-security/oracle-and-data-framework.md)
+
 ***
 
-* [Treasury](treasury-1.md)
-* [Credit](credit/README.md)
-  * [Hybrid Collateralized Credit](credit/credit-overview.md)
-  * [Credit Lifecycle & Tokenized Debt](credit/credit-lifecycle-tokenized-debt.md)
-  * [Credit Protocol Architecture](credit/credit-protocol-architecture.md)
-  * [Tokenized Debt and Secondary Market Architecture](credit/tokenized-debt-and-secondary-market-architecture.md)
-* [Risk & Security](risk-security/README.md)
-  * [Risk Management Framework](risk-security/risk-management.md)
-  * [Security Architecture](risk-security/security-architecture.md)
-  * [Protocol Roles and Permissions](risk-security/protocol-roles-and-permissions.md)
-  * [Security Center](risk-security/security-center.md)
-  * [Oracle and Data Framework](risk-security/oracle-and-data-framework.md)
 * [Tokenomics](tokenomics-and-utility/README.md)
   * [ONMX Token Overview](tokenomics-and-utility/token-overview.md)
   * [Supply, Allocation & Vesting](tokenomics-and-utility/supply-allocation.md)

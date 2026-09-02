@@ -15,14 +15,17 @@
 * [Capital Lifecycle](protocol/capital-lifecycle.md)
 * [Smart Contract Architecture](protocol/smart-contract-architecture.md)
 
+## Treasury
+
+* [Treasury & Yield Engine](treasury/treasury-engine.md)
+* [Capital Allocation & Yield Framework](treasury/allocation-yield.md)
+* [Rebalancing & Market Playbook](treasury/rebalancing-market-playbook.md)
+* [Treasury Execution and Automation Architecture](treasury/treasury-execution-and-automation-architecture.md)
+* [Treasury & Yield Engine](treasury/treasury-engine.md)
+
 ***
 
-* [Protocol](protocol-1.md)
-* [Treasury](treasury/README.md)
-  * [Treasury & Yield Engine](treasury/treasury-engine.md)
-  * [Capital Allocation & Yield Framework](treasury/allocation-yield.md)
-  * [Rebalancing & Market Playbook](treasury/rebalancing-market-playbook.md)
-  * [Treasury Execution and Automation Architecture](treasury/treasury-execution-and-automation-architecture.md)
+* [Treasury](treasury-1.md)
 * [Credit](credit/README.md)
   * [Hybrid Collateralized Credit](credit/credit-overview.md)
   * [Credit Lifecycle & Tokenized Debt](credit/credit-lifecycle-tokenized-debt.md)

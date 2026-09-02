@@ -1,10 +1,15 @@
 # Table of contents
 
 * [Welcome to Onchain Matrix](README.md)
-* [Start-here](start-here/README.md)
-  * [Overview](start-here/overview.md)
-  * [How It Works](start-here/how-it-works.md)
-  * [Current Status](start-here/current-status.md)
+
+## Start-Here
+
+* [Overview](start-here/overview.md)
+* [How It Works](start-here/how-it-works.md)
+* [Current Status](start-here/current-status.md)
+
+***
+
 * [Protocol](protocol/README.md)
   * [Protocol Architecture](protocol/architecture.md)
   * [Capital Lifecycle](protocol/capital-lifecycle.md)

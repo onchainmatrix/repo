@@ -44,11 +44,11 @@ The production contracts and current onchain state determine the actual released
 
 ## Vesting and lock mechanics
 
-Long-duration or restricted allocations are separated from public float through onchain vesting or lock infrastructure.
+Long-duration or restricted allocations are separated from public float through production vesting or lock infrastructure. Onchain Matrix has selected Magna, powered by Kraken, for material ONMX lifecycle infrastructure.&#x20;
 
-The 72.5% Treasury Reserve & LP allocation is intended to use an eight-year third-party structure through Magna.
+The 72.5% Treasury Reserve & LP allocation is intended to use an eight-year structure. Team & Advisors, representing 5% of maximum supply, are intended to vest over four years. Seed follows a six-month cliff followed by eighteen months of linear vesting, with monthly claim availability after the cliff.&#x20;
 
-The Seed allocation follows a 6-month cliff and 18-month linear vesting schedule with monthly claim availability after the cliff.
+The applicable production contracts and Magna allocation state determine the actual restricted, vested, claimable, released, and circulating balances.
 
 ## No ONMX reward inflation
 

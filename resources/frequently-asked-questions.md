@@ -124,11 +124,43 @@ The fixed 1 billion ONMX maximum supply is the supply ceiling. Tokens subject to
 
 <details>
 
+<summary>What is Magna?</summary>
+
+Magna, powered by Kraken, is the third-party token lifecycle infrastructure selected by Onchain Matrix for material ONMX vesting, lock, allocation, and stakeholder claim workflows. Production contracts and onchain records determine the live restricted and claimable balances.
+
+</details>
+
+<details>
+
+<summary>Why does Onchain Matrix use Magna?</summary>
+
+The purpose is to place material restricted ONMX allocations under defined external lifecycle infrastructure, improve supply discipline and stakeholder visibility, provide clearer onchain verification, and reduce reliance on purely manual internal token administration.
+
+</details>
+
+<details>
+
 <summary>What happens to the Treasury Reserve?</summary>
 
 The Treasury Reserve is intended to remain subject to long-duration supply and treasury controls.
 
 Final custody, vesting, lock, release, and deployment mechanics are governed by the applicable contracts, treasury policy, and public onchain records.
+
+</details>
+
+<details>
+
+<summary>How long is the Treasury Reserve restricted?</summary>
+
+The 72.5% Treasury Reserve & LP allocation, representing 725,000,000 ONMX, is intended to use an eight-year linear vested structure through Magna.
+
+</details>
+
+<details>
+
+<summary>How are Team &#x26; Advisor tokens vested?</summary>
+
+The 5% Team & Advisors allocation, representing 50,000,000 ONMX, is intended to vest through Magna over four years. Production schedule details and onchain state control the live vested and claimable amounts.
 
 </details>
 
@@ -365,6 +397,30 @@ The live Seed interface and Terms control eligibility. Access to the interface d
 The current public Seed overview identifies **USDT** as the settlement route.
 
 The live Seed interface and applicable transaction terms control the supported network, payment asset configuration, and transaction process at the time of participation.
+
+</details>
+
+<details>
+
+<summary>Where do Seed participants see their vesting?</summary>
+
+Once Onchain Matrix has added the participant's applicable email or wallet to Magna and production onboarding is active, the participant can log in to app.magna.so to view the ONMX allocation, vesting progress, and claim status.
+
+</details>
+
+<details>
+
+<summary>Can a Seed participant see Team members' individual allocations in Magna?</summary>
+
+No. A standard Magna stakeholder account is designed to show that stakeholder's own allocations. Onchain Matrix separately publishes aggregate supply and vesting transparency for the Treasury Reserve, Team & Advisors, Seed, and other supply categories.
+
+</details>
+
+<details>
+
+<summary>How do I claim vested ONMX?</summary>
+
+When ONMX becomes claimable under the production schedule, the applicable Magna allocation can display a Claim action. The participant signs the onchain claim transaction and verifies completion through the relevant block explorer. The production vesting contract controls the actual claimable amount.
 
 </details>
 

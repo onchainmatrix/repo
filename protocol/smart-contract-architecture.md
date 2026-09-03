@@ -71,11 +71,11 @@ As treasury automation matures, routine actions can become more programmatic whi
 
 ## Vesting and lock layer
 
-Vesting and lock infrastructure separates long-duration or restricted supply from normal circulating supply.
+Vesting and lock infrastructure separates restricted or long-duration ONMX supply from normal public circulation. Onchain Matrix has selected Magna, powered by Kraken, as token lifecycle infrastructure for material ONMX vesting and lock structures.&#x20;
 
-The reserve structure is intended to use Magna over an eight-year period for the 72.5% Treasury Reserve & LP allocation. Seed tokens follow a 6-month cliff plus 18-month linear vesting structure.
+The 72.5% Treasury Reserve & LP allocation is intended to use an eight-year structure; the 5% Team & Advisors allocation is intended to vest over four years; and the 2.5% Seed allocation follows a six-month cliff followed by eighteen months of linear vesting.&#x20;
 
-Production vesting and lock contracts are authoritative for the live balance, unlock state, and claim mechanics.
+Production Magna contracts and current onchain state are authoritative for live restricted balances, vesting status, and claim mechanics.
 
 ## Credit layer
 

@@ -39,15 +39,18 @@
 ## Tokenomics
 
 * [ONMX Token Overview](tokenomics/token-overview.md)
-* [Supply, Allocation & Vesting](tokenomics/supply-allocation.md)
+* [Supply, Allocation & Vesting](tokenomics/supply-allocation-and-vesting.md)
+* [Vesting: Magna Powered by Kraken](tokenomics/vesting-magna-powered-by-kraken.md)
 * [Protocol Revenue & ONMX Value Capture](tokenomics/value-capture-distributions.md)
 * [ONMX Token Contract and Supply Mechanics](tokenomics/onmx-token-contract-and-supply-mechanics.md)
 
-## Finance
+## ONMX/USDT
 
-* [Seed Round](finance/seed-round.md)
-* [Seed Access Technical Flow](finance/seed-access-technical-flow.md)
-* [Seed Access Guide](finance/seed-access-guide.md)
+* [Seed Round](onmx-usdt/seed-round.md)
+* [Seed Access Technical Flow](onmx-usdt/seed-access-technical-flow.md)
+* [How to Buy ONMX](onmx-usdt/how-to-buy-onmx.md)
+* [Magna Dashboard Vesting and Claims](onmx-usdt/magna-dashboard-vesting-and-claims.md)
+* [Seed Access Guide](onmx-usdt/seed-access-guide.md)
 
 ## Developers
 
@@ -67,7 +70,7 @@
 
 ## Resource / Treasury
 
-* [ONMX Supply and Circulating Supply Transparency](resource-treasury/onmx-supply-and-circulating-supply-transparency.md)
+* [ONMX Supply Transparency](resource-treasury/onmx-supply-transparency.md)
 * [Treasury Reporting and Performance Methodology](resource-treasury/treasury-reporting-and-performance-methodology.md)
 
 ## Legal

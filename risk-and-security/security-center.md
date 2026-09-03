@@ -77,6 +77,10 @@ Material production contracts are designed to move through a disciplined lifecyc
 Security reviews reduce risk but do not guarantee that a contract is free of vulnerabilities.
 {% endhint %}
 
+## Third-party token lifecycle infrastructure
+
+ONMX uses third-party token lifecycle infrastructure through Magna, powered by Kraken, for material vesting, lock, and claim workflows. The integration reduces reliance on manual internal token administration and provides additional operational separation and verification, but it also introduces third-party and smart-contract dependencies that remain part of the protocol's risk model.
+
 ## Audits and independent review
 
 Only completed, publicly accessible security reviews are represented as completed audits.

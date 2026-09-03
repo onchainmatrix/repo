@@ -110,6 +110,18 @@ The registry can include:
 A contract should not be treated as official until it is published through official Onchain Matrix documentation.
 {% endhint %}
 
+## Magna vesting and lock integration
+
+ONMX production vesting and lock deployments are intended to use Magna, powered by Kraken, for material restricted allocations. Developers should treat the official Magna production contracts and current onchain state as authoritative for vesting, restricted balance, claimable balance, and completed claim events. Do not infer a release schedule solely from offchain dates.
+
+
+
+* Treasury Reserve & LP — 72.5% — 8-year structure
+* Team & Advisors — 5% — 4-year vesting
+* Seed — 2.5% — 6-month cliff + 18-month linear vesting
+
+Individual Magna stakeholder accounts are private allocation views. Project-wide circulating-supply analytics should use the official ONMX Supply & Circulating-Supply Transparency methodology.
+
 ## Contract Verification
 
 Before integrating an Onchain Matrix contract:

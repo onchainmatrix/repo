@@ -106,7 +106,7 @@ Emergency controls exist to reduce potential damage during abnormal conditions. 
 
 Emergency authority is intended to remain narrow, observable, and separate from unrestricted treasury transfers.
 
-## Public accountability
+## Public accountability or third-party infrastructure
 
 For privileged onchain roles, Onchain Matrix is designed to expose enough information for independent review of:
 
@@ -117,3 +117,5 @@ For privileged onchain roles, Onchain Matrix is designed to expose enough inform
 * Executed privileged actions
 
 Sensitive credentials, signer identities, recovery material, and internal infrastructure details remain protected.
+
+**Token lifecycle infrastructure is separately administered through the applicable Magna production contracts and workflows. Magna's role does not replace the protocol's treasury multi-signature controls or grant unrestricted treasury authority.**

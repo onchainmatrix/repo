@@ -33,7 +33,7 @@ flowchart TB
     B --> C[Wallet Authorization]
     C --> D[Payment & Network Validation]
     D --> E[Seed Transaction]
-    E --> F[ONMX Vesting Position]
+    E --> F[ONMX Vesting Position — Magna]
     F --> G[Cliff]
     G --> H[Monthly Linear Claims]
 ```
@@ -63,6 +63,8 @@ Seed ONMX is not intended to become immediately liquid at TGE.
 The 25,000,000 ONMX Seed allocation follows a 6-month cliff followed by 18 months of linear vesting. Monthly claim availability begins after the cliff under the applicable production vesting implementation.
 
 The live vesting contract controls the actual claimable balance and release state.
+
+Following a completed Seed allocation, the participant's vesting position is intended to be onboarded into Magna, powered by Kraken. Once access is enabled, the participant can monitor the allocation and claim ONMX through the applicable Magna workflow when the production schedule makes tokens claimable.
 
 ## Treasury treatment
 

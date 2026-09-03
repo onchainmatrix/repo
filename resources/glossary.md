@@ -48,6 +48,10 @@ The connected process of forming, preserving, growing, and redeploying capital a
 
 A protective control designed to restrict, pause, or alter activity when predefined risk or security conditions are met.
 
+## Claimable
+
+ONMX currently available for an eligible stakeholder to claim from the applicable production vesting or distribution infrastructure.
+
 ## Collateral
 
 Assets pledged or locked to secure a credit position.
@@ -126,6 +130,10 @@ A measure of debt relative to the value of collateral securing the position.
 **LTV = Outstanding Debt ÷ Collateral Value**
 
 Higher LTV generally means less collateral protection against adverse price movement.
+
+## Magna
+
+The token lifecycle platform selected by Onchain Matrix for material ONMX vesting, lock, allocation-management, and stakeholder-claim workflows. Magna operates as a standalone platform powered by Kraken.
 
 ## Market Depth
 
@@ -229,6 +237,10 @@ A protocol-directed distribution of eligible stablecoin value to qualifying part
 
 Stablecoin distributions are not guaranteed and remain subject to legal, policy, eligibility, treasury, and operational conditions.
 
+## Stakeholder
+
+Within token lifecycle infrastructure, a recipient associated with an allocation, such as a Seed participant, Team member, advisor, contributor, or other eligible token recipient.
+
 ## Structured Credit
 
 Credit established under predefined economic, collateral, maturity, repayment, monitoring, and resolution terms.
@@ -270,6 +282,10 @@ Changes in the estimated value of an asset or position that have not yet been fi
 ## Vesting
 
 A release mechanism under which token access becomes available over time according to predefined conditions or a schedule.
+
+## Vesting Dashboard
+
+The stakeholder interface used to monitor an allocation's schedule, unlocked balance, claimable balance, receiving wallet, and completed claims where supported.
 
 ## Warning Zone
 

@@ -49,6 +49,7 @@
 * [Seed Round](onmx-usdt/seed-round.md)
 * [Seed Access Technical Flow](onmx-usdt/seed-access-technical-flow.md)
 * [How to Buy ONMX](onmx-usdt/how-to-buy-onmx.md)
+* [How to Buy ONMX Visual Guide](onmx-usdt/how-to-buy-onmx-visual-guide.md)
 * [Magna Dashboard Vesting and Claims](onmx-usdt/magna-dashboard-vesting-and-claims.md)
 * [Seed Access Guide](onmx-usdt/seed-access-guide.md)
 

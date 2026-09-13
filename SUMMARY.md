@@ -42,6 +42,7 @@
 * [Supply, Allocation & Vesting](tokenomics/supply-allocation-and-vesting.md)
 * [Vesting: Magna Powered by Kraken](tokenomics/vesting-magna-powered-by-kraken.md)
 * [Protocol Revenue & ONMX Value Capture](tokenomics/value-capture-distributions.md)
+* [Community Airdrops](tokenomics/community-airdrops.md)
 * [ONMX Token Contract and Supply Mechanics](tokenomics/onmx-token-contract-and-supply-mechanics.md)
 
 ## ONMX/USDT

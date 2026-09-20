@@ -40,7 +40,7 @@ Onchain Matrix is organized around three connected layers:
 * Website: [https://onchainmatrix.com](https://onchainmatrix.com/)
 * Telegram: [https://t.me/onchainmatrix](https://t.me/onchainmatrix)
 * X: [https://x.com/Onchain\_Matrix](https://x.com/Onchain_Matrix)
-* Discord: [https://discord.com/invite/n4taTt5z7N](https://discord.com/invite/n4taTt5z7N)
+* Discord: [https://discord.com/invite/n4taTt5z7N](https://discord.com/invite/8RjjJ62z94)
 * Medium: [https://medium.com/@onchainmatrix](https://medium.com/@onchainmatrix)
 * GitBook: [https://onchainmatrix.gitbook.io/onchain-matrix/](https://onchainmatrix.gitbook.io/onchain-matrix/)
 * Linktree: [https://linktr.ee/OnchainMatrix](https://linktr.ee/OnchainMatrix)

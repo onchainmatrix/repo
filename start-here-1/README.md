@@ -1,6 +1,0 @@
----
-hidden: true
----
-
-# BNB Mainnet
-

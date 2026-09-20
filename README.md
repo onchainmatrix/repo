@@ -37,7 +37,7 @@ Onchain Matrix is organized around three connected layers:
 {% hint style="info" %}
 **Links:**
 
-* Website: [https://onchainmatrix.com](https://maple.finance/)
+* Website: [https://onchainmatrix.com](https://onchainmatrix.com/)
 * Telegram: [https://t.me/onchainmatrix](https://t.me/onchainmatrix)
 * X: [https://x.com/Onchain\_Matrix](https://x.com/Onchain_Matrix)
 * Discord: [https://discord.com/invite/n4taTt5z7N](https://discord.com/invite/n4taTt5z7N)

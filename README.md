@@ -1,10 +1,11 @@
 ---
 description: >-
-  Official documentation for Onchain Matrix, an onchain capital infrastructure
-  protocol on BNB Chain.
+  The canonical technical, economic, security, and operational documentation for
+  the Onchain Matrix protocol, an onchain capital infrastructure protocol on BNB
+  Chain.
 ---
 
-# Onchain Matrix
+# Welcome to Onchain Matrix
 
 **Capital infrastructure for onchain finance.**
 
@@ -22,11 +23,26 @@ Onchain Matrix is organized around three connected layers:
 
 ## Design principles
 
-* **Preserve capital before pursuing return.**
-* **Generate yield from productive deployment, not token emissions.**
-* **Fund operations from yield and protocol revenue rather than routinely spending treasury principal.**
-* **Separate financial risk management from cybersecurity controls.**
-* **Use multi-party control, controlled upgrades, monitoring, and public onchain verification for critical infrastructure.**
-* **Introduce credit and tokenized-debt functionality in phases as the protocol, treasury, security controls, and market infrastructure mature.**
+* Preserve capital before pursuing return.
+* Generate yield from productive deployment, not token emissions.
+* Fund operations from yield and protocol revenue rather than routinely spending treasury principal.
+* Separate financial risk management from cybersecurity controls.
+* Use multi-party control, controlled upgrades, monitoring, and public onchain verification for critical infrastructure.
+* Introduce credit and tokenized-debt functionality in phases as the protocol, treasury, security controls, and market infrastructure mature.
 
 > Some components described in this documentation are live or in launch-stage deployment, while others are roadmap features. See **Current Status** for the distinction.
+
+
+
+{% hint style="info" %}
+**Links:**
+
+* Website: [https://onchainmatrix.com](https://onchainmatrix.com/)
+* Telegram: [https://t.me/onchainmatrix](https://t.me/onchainmatrix)
+* X: [https://x.com/Onchain\_Matrix](https://x.com/Onchain_Matrix)
+* Discord: [https://discord.com/invite/8RjjJ62z94](https://discord.com/invite/8RjjJ62z94)
+* Medium: [https://medium.com/@onchainmatrix](https://medium.com/@onchainmatrix)
+* GitBook: [https://onchainmatrix.gitbook.io/onchain-matrix/](https://onchainmatrix.gitbook.io/onchain-matrix/)
+* Linktree: [https://linktr.ee/OnchainMatrix](https://linktr.ee/OnchainMatrix)
+* CoinMarket Cap: [https://coinmarketcap.com/community/profile/Onchain\_Matrix/](https://coinmarketcap.com/community/profile/Onchain_Matrix/)
+{% endhint %}
